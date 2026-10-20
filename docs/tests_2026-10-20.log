@@ -1,0 +1,34 @@
+test_acceleration_does_not_trigger (test_alerts.AlertTest.test_acceleration_does_not_trigger) ... ok
+test_anomaly_flag_is_reported_without_bad_data (test_alerts.AlertTest.test_anomaly_flag_is_reported_without_bad_data) ... ok
+test_hysteresis_holds_then_recovers (test_alerts.AlertTest.test_hysteresis_holds_then_recovers) ... ok
+test_level_escalation_requires_consecutive_samples (test_alerts.AlertTest.test_level_escalation_requires_consecutive_samples) ... ok
+test_velocity_is_gated_before_displacement (test_alerts.AlertTest.test_velocity_is_gated_before_displacement) ... ok
+test_ecef_roundtrip (test_coordinate.CoordinateTest.test_ecef_roundtrip) ... ok
+test_enu_matches_local_offset (test_coordinate.CoordinateTest.test_enu_matches_local_offset) ... ok
+test_non_rtk_fix_is_low_precision_after_verification (test_engine_gating.EngineGatingTest.test_non_rtk_fix_is_low_precision_after_verification) ... ok
+test_rtk_fixed_displacement_after_calibration (test_engine_gating.EngineGatingTest.test_rtk_fixed_displacement_after_calibration) ... ok
+test_unverified_serial_never_shows_displacement (test_engine_gating.EngineGatingTest.test_unverified_serial_never_shows_displacement) ... ok
+test_calibration_and_zero_displacement (test_features.FeatureTest.test_calibration_and_zero_displacement) ... ok
+test_constant_slope_rate_is_reasonable (test_features.FeatureTest.test_constant_slope_rate_is_reasonable) ... ok
+test_step_is_detected_as_displacement (test_features.FeatureTest.test_step_is_detected_as_displacement) ... ok
+test_initializes_to_first_fix (test_filters.KalmanTest.test_initializes_to_first_fix) ... ok
+test_large_gap_resets (test_filters.KalmanTest.test_large_gap_resets) ... ok
+test_single_outlier_rejected (test_filters.KalmanTest.test_single_outlier_rejected) ... ok
+test_static_series_stays_stable (test_filters.KalmanTest.test_static_series_stays_stable) ... ok
+test_bad_checksum_rejected (test_nmea.NmeaTest.test_bad_checksum_rejected) ... ok
+test_invalid_fix_not_valid (test_nmea.NmeaTest.test_invalid_fix_not_valid) ... ok
+test_make_gga_roundtrip (test_nmea.NmeaTest.test_make_gga_roundtrip) ... ok
+test_parse_gga (test_nmea.NmeaTest.test_parse_gga) ... ok
+test_concatenated_frames (test_run_protocol.RunProtocolTest.test_concatenated_frames) ... ok
+test_float_is_not_precision_ok (test_run_protocol.RunProtocolTest.test_float_is_not_precision_ok) ... ok
+test_garbage_between_frames_ignored (test_run_protocol.RunProtocolTest.test_garbage_between_frames_ignored) ... ok
+test_impossible_position_rejected (test_run_protocol.RunProtocolTest.test_impossible_position_rejected) ... ok
+test_invalid_status (test_run_protocol.RunProtocolTest.test_invalid_status) ... ok
+test_missing_fields_rejected (test_run_protocol.RunProtocolTest.test_missing_fields_rejected) ... ok
+test_rtk_fixed_is_precision_ok (test_run_protocol.RunProtocolTest.test_rtk_fixed_is_precision_ok) ... ok
+test_vendor_sample_fields (test_run_protocol.RunProtocolTest.test_vendor_sample_fields) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 0.106s
+
+OK

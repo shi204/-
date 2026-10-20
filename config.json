@@ -1,0 +1,143 @@
+{
+  "app": {
+    "host": "127.0.0.1",
+    "port": 8000,
+    "title": "基于北斗/GNSS的山体桥梁形变智能预警系统",
+    "team": "智守山河 · 中国国际大学生创新大赛"
+  },
+  "mode": "simulation",
+  "sampling_hz": 1,
+  "reference": {
+    "lat": 31.9831969,
+    "lon": 119.6265216,
+    "alt": 18.1001593,
+    "auto": false
+  },
+  "stations": [
+    {
+      "id": "base",
+      "name": "基准站 · 桥台基岩",
+      "short": "BASE",
+      "role": "base",
+      "port": "",
+      "baud": 0,
+      "enabled": true,
+      "color": "#22d3ee",
+      "lat": 31.9831969,
+      "lon": 119.6265216,
+      "alt": 18.1001593,
+      "relative_enu_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scene": {
+        "x": -78,
+        "z": 6,
+        "y": 11
+      },
+      "description": "稳定基准点，提供形变解算参考"
+    },
+    {
+      "id": "rover1",
+      "name": "监测站 01 · 主跨跨中",
+      "short": "R01",
+      "role": "rover",
+      "port": "",
+      "baud": 0,
+      "enabled": true,
+      "color": "#34d399",
+      "lat": 31.9831427881,
+      "lon": 119.6273469034,
+      "alt": 18.1006386261,
+      "relative_enu_m": [
+        78.0,
+        -6.0,
+        0.0
+      ],
+      "scene": {
+        "x": 0,
+        "z": 0,
+        "y": 16
+      },
+      "description": "桥梁主跨跨中，重点监测竖向挠度"
+    },
+    {
+      "id": "rover2",
+      "name": "监测站 02 · 坡体中部",
+      "short": "R02",
+      "role": "rover",
+      "port": "",
+      "baud": 0,
+      "enabled": true,
+      "color": "#a78bfa",
+      "lat": 31.9834133288,
+      "lon": 119.6279394318,
+      "alt": 24.1016109223,
+      "relative_enu_m": [
+        134.0,
+        24.0,
+        6.0
+      ],
+      "scene": {
+        "x": 56,
+        "z": 30,
+        "y": 20
+      },
+      "description": "山体边坡中部，重点监测水平滑移"
+    }
+  ],
+  "thresholds": {
+    "blue": {
+      "d": 12.0,
+      "v": 20.0,
+      "a": 15.0
+    },
+    "yellow": {
+      "d": 30.0,
+      "v": 40.0,
+      "a": 30.0
+    },
+    "orange": {
+      "d": 60.0,
+      "v": 80.0,
+      "a": 60.0
+    },
+    "red": {
+      "d": 120.0,
+      "v": 150.0,
+      "a": 120.0
+    },
+    "up_samples": 3,
+    "down_samples": 20
+  },
+  "processing": {
+    "calibration_samples": 30,
+    "velocity_window_s": 30,
+    "noise_window_s": 90,
+    "prediction_window_s": 120,
+    "process_noise": 0.008,
+    "simulation_process_noise": 5e-05,
+    "measurement_noise_m": 0.6,
+    "max_gap_s": 5.0
+  },
+  "simulation": {
+    "noise_mm": 0.6,
+    "common_noise_mm": 0.8,
+    "scenario": "normal",
+    "rate_mm_s": 0.5,
+    "accel_mm_s2": 0.005,
+    "step_mm": 40.0,
+    "direction_deg": 35.0
+  },
+  "acquisition": {
+    "protocol_verified": false,
+    "verified_station_ids": [],
+    "raw_log_enabled": true
+  },
+  "alerts": {
+    "webhook_url": "",
+    "sound": true,
+    "auto_ack_seconds": 0
+  }
+}
